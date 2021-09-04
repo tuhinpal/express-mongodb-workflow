@@ -1,0 +1,35 @@
+{
+  "name": "express-mongodb-workflow",
+  "version": "1.0.0",
+  "description": "You should follow this workflow to build your easily maintainable, secure API with ExpressJS and MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "npm run swagger && node index.js",
+    "swagger": "node swagger.js"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/cachecleanerjeet/express-mongodb-workflow#readme",
+  "author": "cachecleanerjeet <me@thetuhin.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.1.1",
+    "swagger-autogen": "^2.11.2",
+    "swagger-ui-express": "^4.1.6",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cachecleanerjeet/express-mongodb-workflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cachecleanerjeet/express-mongodb-workflow/issues"
+  }
+}
