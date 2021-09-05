@@ -9,7 +9,8 @@
   "basePath": "/",
   "tags": [],
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "securityDefinitions": {
     "apiKeyAuth": {
@@ -17,12 +18,7 @@
       "in": "header",
       "name": "authorization",
       "description": "Your jwt session token. You can retrive it by signin or signup"
-    },
-    "host": "localhost:3000",
-    "schemes": [
-      "http",
-      "https"
-    ]
+    }
   },
   "consumes": [],
   "produces": [],
