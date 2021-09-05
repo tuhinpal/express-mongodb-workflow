@@ -120,6 +120,52 @@
         }
       }
     },
+    "/public/getPosts": {
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "searchQuery",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "sortByDate",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/private/getMe": {
       "get": {
         "tags": [],
@@ -297,8 +343,8 @@
           }
         ],
         "responses": {
-          "201": {
-            "description": "Created"
+          "200": {
+            "description": "OK"
           },
           "401": {
             "description": "Unauthorized"

@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
       });
 
       if (deletePost.acknowledged) {
-        res.status(201).json({
+        res.status(200).json({
           status: true,
           message: "Post deleted",
           data: {
