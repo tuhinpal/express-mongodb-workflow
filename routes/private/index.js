@@ -39,4 +39,6 @@ router.post(
   require("./updatePost")
 );
 
+router.delete("/deletePost/:postId", isAuthenticated, require("./deletePost"));
+
 module.exports = router;

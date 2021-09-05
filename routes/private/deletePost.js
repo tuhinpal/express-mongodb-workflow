@@ -13,30 +13,21 @@ module.exports = async (req, res) => {
     });
 
     if (checkIfExists) {
-      var updatePost = await db.collection("posts").updateOne(
-        {
-          userId: id,
-          _id: ObjectId(req.params.postId),
-        },
-        {
-          $set: {
-            ...req.body,
-            updatedAt: new Date(),
-          },
-        }
-      );
+      var deletePost = await db.collection("posts").deleteOne({
+        userId: id,
+        _id: ObjectId(req.params.postId),
+      });
 
-      if (updatePost.acknowledged) {
+      if (deletePost.acknowledged) {
         res.status(201).json({
           status: true,
-          message: "Post updated",
+          message: "Post deleted",
           data: {
             postId: req.params.postId,
-            updatedItems: req.body,
           },
         });
       } else {
-        throw new Error("Post not updated");
+        throw new Error("Post not deleted");
       }
     } else {
       res.status(404).json({
