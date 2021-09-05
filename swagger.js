@@ -1,4 +1,5 @@
 const swaggerAutogen = require("swagger-autogen")();
+require("dotenv").config();
 
 const outputFile = "./docs/swagger.json";
 const endpointsFiles = ["./index.js"];
@@ -17,5 +18,7 @@ swaggerAutogen(outputFile, endpointsFiles, {
       description:
         "Your jwt session token. You can retrive it by signin or signup",
     },
+    host: process.env.APPLICATION_HOST || "localhost:3000",
+    schemes: ["http", "https"],
   },
 });
