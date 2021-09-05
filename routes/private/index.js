@@ -33,4 +33,10 @@ router.post(
   require("./createPost")
 );
 
+router.post(
+  "/updatePost/:postId",
+  [isAuthenticated, require("../../validation/updatePost")],
+  require("./updatePost")
+);
+
 module.exports = router;
