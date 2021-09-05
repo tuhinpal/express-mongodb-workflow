@@ -4,6 +4,10 @@ const router = express.Router();
 require("dotenv").config();
 
 function isAuthenticated(req, res, next) {
+  /* #swagger.security = [{
+               "apiKeyAuth": []
+        }] */
+
   try {
     const user = jwt.verify(
       req.headers.authorization || req.query.auth, // accept token from header(authorization) or query(auth)
@@ -22,5 +26,11 @@ function isAuthenticated(req, res, next) {
 }
 
 router.get("/getMe", isAuthenticated, require("./getMe"));
+
+router.post(
+  "/createPost",
+  [isAuthenticated, require("../../validation/createPost")],
+  require("./createPost")
+);
 
 module.exports = router;

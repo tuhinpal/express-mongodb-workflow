@@ -1,4 +1,4 @@
-const { ObjectId } = require("bson");
+const { ObjectId } = require("mongodb");
 const database = require("../../db");
 
 module.exports = async (req, res) => {

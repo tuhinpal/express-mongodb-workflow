@@ -9,4 +9,13 @@ swaggerAutogen(outputFile, endpointsFiles, {
     description:
       "You should follow this workflow to build your easily maintainable, secure API with ExpressJS and MongoDB.",
   },
+  securityDefinitions: {
+    apiKeyAuth: {
+      type: "apiKey",
+      in: "header",
+      name: "authorization",
+      description:
+        "Your jwt session token. You can retrive it by signin or signup",
+    },
+  },
 });
