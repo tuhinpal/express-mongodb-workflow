@@ -10,7 +10,7 @@ function isAuthenticated(req, res, next) {
 
   try {
     const user = jwt.verify(
-      req.headers.authorization || req.query.auth, // accept token from header(authorization) or query(auth)
+      req.headers.authorization, // accept token from header(authorization)
       process.env.JWT_SECRET
     );
     req.user = user;

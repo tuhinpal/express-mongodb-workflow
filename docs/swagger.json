@@ -171,13 +171,7 @@
       "get": {
         "tags": [],
         "description": "",
-        "parameters": [
-          {
-            "name": "auth",
-            "in": "query",
-            "type": "string"
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -201,11 +195,6 @@
         "tags": [],
         "description": "",
         "parameters": [
-          {
-            "name": "auth",
-            "in": "query",
-            "type": "string"
-          },
           {
             "name": "obj",
             "in": "body",
@@ -270,11 +259,6 @@
             "type": "string"
           },
           {
-            "name": "auth",
-            "in": "query",
-            "type": "string"
-          },
-          {
             "name": "obj",
             "in": "body",
             "schema": {
@@ -335,11 +319,6 @@
             "name": "postId",
             "in": "path",
             "required": true,
-            "type": "string"
-          },
-          {
-            "name": "auth",
-            "in": "query",
             "type": "string"
           }
         ],

@@ -10,6 +10,10 @@ Check source code you will get the idea. This workflow is also followed by me. C
 - Install dependencies by running `npm i`
 - `npm run dev` to run this as development
 
+### Advance Note:
+
+- Create a fulltext search index `db.posts.createIndex({ title: "text", content: "text" })`
+
 ### License & Copyright :
 
 - This Project is [MIT](https://github.com/cachecleanerjeet/express-mongodb-workflow/blob/master/LICENSE) Licensed
