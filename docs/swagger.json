@@ -9,8 +9,8 @@
   "basePath": "/",
   "tags": [],
   "schemes": [
-    "http",
-    "https"
+    "https",
+    "http"
   ],
   "securityDefinitions": {
     "apiKeyAuth": {

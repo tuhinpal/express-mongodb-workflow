@@ -20,5 +20,5 @@ swaggerAutogen(outputFile, endpointsFiles, {
     },
   },
   host: process.env.APPLICATION_HOST || "localhost:3000",
-  schemes: ["http", "https"],
+  schemes: ["https", "http"],
 });
